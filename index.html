@@ -61,22 +61,22 @@
         /* Below, we would target the 'html' element to change 
            the background color using document.querySelector('html') 
         */
-    myDate = new Date();
-    myHour = myDate.getHours();
-    mySentence = "";
-    myColor = "";
+        myDate = new Date();
+        myHour = myDate.getHours();
+        mySentence = "";
+        myColor = "";
 
-    if(myHour >= 12){
-    //alert("It's after noon!");
-    mySentence = "It's after noon!"
-    myColor = "blue";
-    }else{
-    //alert("It's not after noon");  
-    mySentence = "It's not after noon!"
-    myColor = "purple";
-    }
+        if(myHour >= 12){
+        //alert("It's after noon!");
+        mySentence = "It's after noon!"
+        myColor = "blue";
+        }else{
+        //alert("It's not after noon");  
+        mySentence = "It's not after noon!"
+        myColor = "purple";
+        }
 
-document.getElementById("mydiv").innerHTML = mySentence;
+document.getElementById("time-text").innerHTML = mySentence;
 document.body.style.backgroundcolor = myColor
 
         // Fixes HTML/CSS Checker links
