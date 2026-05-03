@@ -7,9 +7,6 @@ body {
     align-items: center;
 
     font-family: 'Segoe UI', Tahoma, sans-serif;
-
-    /* Gradient background instead of flat purple */
-    background: linear-gradient(135deg, #667eea, #764ba2);
 }
 
 .container {
