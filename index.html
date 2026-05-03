@@ -3,38 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Time of Day by Tee Hyatt</title>
-
-    <style>
-        html {
-            background-color: #f4f4f9;
-            transition: background-color 0.5s ease;
-        }
-
-        body {
-            font-family: sans-serif;
-            text-align: center;
-            margin-top: 50px;
-            color: #333;
-        }
-
-        .container {
-            max-width: 600px;
-            margin: auto;
-            padding: 20px;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
-        }
-
-        #time-pic {
-            max-width: 300px;
-            height: auto;
-            border-radius: 8px;
-            margin-top: 20px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-        }
-    </style>
 </head>
 
 <body>
@@ -45,82 +15,32 @@
         <h2 id="time-text">Loading...</h2>
         <h3 id="day-text"></h3>
 
-        <p>This page changes based on the current time of day.</p>
-
-        <p>
-            This page uses JavaScript to check the current hour from the user's computer clock.
-            Depending on whether it is morning, afternoon, evening, or night, the page changes
-            the message, background color, and image.
-        </p>
-
-        <p>
-            The page also displays the current day of the week using JavaScript.
-        </p>
-
         <img id="time-pic" src="https://dummyimage.com/300x400" alt="Time of Day Image">
+
+        <h3>How This Page Works</h3>
+<p>
+This webpage displays a message and image based on the current time of day.
+JavaScript is used to get the current hour from the user’s computer. Based on the hour,
+the page changes the greeting text, day of the week, background color, and image.
+<br>
+<br>
+For example, in the morning it shows a “Good morning” message, while in the evening
+it changes to a “Good evening” message with a different image. The JavaScript updates
+the content dynamically using DOM manipulation by targeting elements with specific IDs.
+<br>
+<br>
+</p>
     </div>
 
-    <script>
-        let myDate = new Date();
-        let myHour = myDate.getHours();
-
-        let mySentence = "";
-        let myColor = "";
-        let myImage = "";
-        let myAlt = "";
-
-        if (myHour >= 5 && myHour < 12) {
-            mySentence = "Good morning! Time to wake up and start the day!";
-            myColor = "orange";
-            myImage = "https://dummyimage.com/300x400/f9c74f/000000&text=Morning";
-            myAlt = "Morning image";
-        } 
-        else if (myHour >= 12 && myHour < 18) {
-            mySentence = "Good afternoon! Hope your day is going well!";
-            myColor = "skyblue";
-            myImage = "https://dummyimage.com/300x400/90be6d/000000&text=Afternoon";
-            myAlt = "Afternoon image";
-        } 
-        else if (myHour >= 18 && myHour < 23) {
-            mySentence = "Good evening! Time to relax a little.";
-            myColor = "mediumpurple";
-            myImage = "https://dummyimage.com/300x400/577590/ffffff&text=Evening";
-            myAlt = "Evening image";
-        } 
-        else {
-            mySentence = "Good night! It is late, go get some sleep!";
-            myColor = "midnightblue";
-            myImage = "https://dummyimage.com/300x400/1d3557/ffffff&text=Night";
-            myAlt = "Night image";
-        }
-
-        document.getElementById("time-text").innerHTML = mySentence;
-        document.getElementById("time-pic").src = myImage;
-        document.getElementById("time-pic").alt = myAlt;
-        document.querySelector("html").style.backgroundColor = myColor;
-
-        let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-        let today = days[myDate.getDay()];
-
-        document.getElementById("day-text").innerHTML = "Today is " + today + ".";
-    </script>
+    
 
     <footer style="margin-top: 30px;">
-        <small>
-            <a id="html-validate" href="" target="_blank">Check HTML</a> |
-            <a id="css-validate" href="" target="_blank">Check CSS</a>
-        </small>
+
     </footer>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            var currentUrl = window.location.href;
-            document.getElementById("html-validate").href =
-                "https://validator.w3.org/nu/?doc=" + encodeURIComponent(currentUrl);
-            document.getElementById("css-validate").href =
-                "https://jigsaw.w3.org/css-validator/validator?uri=" + encodeURIComponent(currentUrl);
-        });
-    </script>
+    <script src="script.js"></script>
+    <img id="floating-gif" src="https://media3.giphy.com/media/v1.Y2lkPTZjMDliOTUyYzliaDB1OHMyNWp1a2RsY3JqeW92dW94d2w2a2gycXJ5d2xkMndvdyZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/i7gAg6HIZ2p3AnMeZ4/200w.gif" alt="floating buddy">
 
+    <img id="floating-gif2" src="https://media4.giphy.com/media/v1.Y2lkPTZjMDliOTUyb2h4NXNoeG43Y3A3Y2dob2RoanZqeWNtMWt2OWNlcGFnZHp3ZHF3diZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/wigL0XHWGq0SusFQrj/giphy.gif" alt="floating buddy">
 </body>
 </html>
