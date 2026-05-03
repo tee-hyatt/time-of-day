@@ -19,12 +19,12 @@ body {
     background: rgba(255, 255, 255, 0.95);
     border-radius: 15px;
 
-    /* stronger shadow = depth */
+
     box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 
     text-align: center;
 
-    /* subtle animation on load */
+
     transform: translateY(0);
     transition: transform 0.3s ease;
 }
@@ -48,7 +48,7 @@ h3 {
     margin-bottom: 20px;
 }
 
-/* image styling */
+
 #time-pic {
     width: 100%;
     max-width: 300px;
